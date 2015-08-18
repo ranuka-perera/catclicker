@@ -15,6 +15,9 @@ body {
     background-color: rgba(0,0,0,0.6);
     color: whitesmoke;
 }
+.scorecard2 {
+    left: 50%;
+}
 .image-holder {
     width: 100%;
     overflow: hidden;
