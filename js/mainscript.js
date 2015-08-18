@@ -6,10 +6,10 @@ var max = images.length;
 for (count = 0; count < max; count++) {
     var click = clicks[count];
     var score = scores[count];
-    (function (click, score, image) {
-        image.addEventListener('click', (function () {
+    images[count].addEventListener('click', (function (click, score) {
+        return function () {
             click += 1;
             score.innerHTML = 'Clicks: ' + click;
-        }), false);
-    }(click, score, images[count]));
+        };
+    })(click, score), false);
 }
