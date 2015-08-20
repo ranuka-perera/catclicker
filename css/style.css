@@ -1,15 +1,41 @@
 body {
     margin: 0;
+    box-sizing: border-box;
+    flex-direction: row;
+}
+span {
+    display: block;
+    text-align: center;
 }
 .container {
     width: 100%;
+    display: flex;
+}
+.cat-list {
+    /* width: 12%;  For small screens? */
+    width: 22%; /* 720p screens*/
+    display: flex;
+    flex-direction: column;
+}
+.cat-li-item {
+    padding: 15px;
+}
+.thumb {
+    width: 100%;
+}
+.cat-info {
+    width: 70%;
+    margin: 0 auto;
+    padding: 4% 0;
+    overflow: scroll;
+    position: relative;
 }
 .image {
-    width: 50%;
+    width: 100%;
 }
 .scorecard {
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 7%;
     margin: 10px;
     padding: 5px;
     background-color: rgba(0,0,0,0.6);
@@ -19,7 +45,5 @@ body {
     left: 50%;
 }
 .image-holder {
-    width: 100%;
-    overflow: hidden;
-    display: inline-flex;
+    width: 88%;
 }
