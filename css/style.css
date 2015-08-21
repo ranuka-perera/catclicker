@@ -16,6 +16,9 @@ span {
     width: 22%; /* 720p screens*/
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    padding: 0;
+        /*overflow: scroll;*/
 }
 .cat-li-item {
     padding: 15px;
@@ -26,8 +29,7 @@ span {
 .cat-info {
     width: 70%;
     margin: 0 auto;
-    padding: 4% 0;
-    overflow: scroll;
+    padding: 3% 0;
     position: relative;
 }
 .image {
@@ -45,5 +47,10 @@ span {
     left: 50%;
 }
 .image-holder {
+    width: 88%;
+
+}
+.image-fixed {
+    position: fixed;
     width: 88%;
 }
