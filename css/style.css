@@ -18,6 +18,7 @@ span {
     flex-direction: column;
     text-decoration: none;
     padding: 0;
+    will-change: transform;
         /*overflow: scroll;*/
 }
 .cat-li-item {
