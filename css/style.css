@@ -28,18 +28,23 @@ span {
     width: 100%;
 }
 .cat-info {
-    width: 70%;
-    margin: 0 auto;
-    padding: 3% 0;
-    position: relative;
+    box-sizing: border-box;
+    height: 95%;
+    /*height: 60%;*/
+    padding: 15px;
+    position: fixed;
+    width: 78%;
 }
 .image {
+    background: repeat scroll center top / cover ;
+    background-image: url("../img/unnamed_cat_1.jpg");
+    height: calc(100% - 1em);
     width: 100%;
 }
 .scorecard {
     position: absolute;
-    top: 7%;
-    margin: 10px;
+    top: 10%;
+    margin: 12px;
     padding: 5px;
     background-color: rgba(0,0,0,0.6);
     color: whitesmoke;
@@ -49,9 +54,32 @@ span {
 }
 .image-holder {
     width: 88%;
+    position:fixed;
 
 }
 .image-fixed {
     position: fixed;
     width: 88%;
+}
+#cat-name {
+        /*text-align: center;*/
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    color: white;
+    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-size: 2em;
+}
+.admin-area {
+    margin-top:15px;
+}
+input {
+
+}
+.field {
+    margin-right: 3%;
+    display: inline-block;
+}
+.hide{
+    display: none;
 }

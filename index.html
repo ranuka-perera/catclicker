@@ -12,16 +12,32 @@
     </ul>
 
     <div class="image-holder">
-        <div class="image-fixed">
             <div class="cat-info">
-                <div class="dynamic-cat">
-                    <!--<img src="img/unnamed_cat_1.jpg" alt="obligatory cat picture" class="image">-->
-                    <!--<span>Spiffy</span>-->
+                <div class="image"></div>
+                <span id="cat-name">Spiffy</span>
+                <div class="admin-area">
+                    <div class="launch-admin"><button id="toggle-admin">Admin</button></div>
+                    <div class="in-admin">
+                    <div class="field">
+                        <label for="name">Cat Name</label>
+                        <input id="name">
+                    </div>
+                    <div class="field">
+                        <label for="url">Cat URL</label>
+                        <input id="url">
+                    </div>
+                    <div class="field">
+                        <label for="count">Click Count</label>
+                        <input id="count">
+                    </div>
+                    <div class="field">
+                        <button id="submit">Update Cat</button>
+                    </div>
                 </div>
-                <div class="scorecard">
-                    <label class="score">Clicks: 0</label>
                 </div>
             </div>
+        <div class="scorecard">
+            <label class="score">Clicks: 0</label>
         </div>
     </div>
 
