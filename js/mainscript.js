@@ -16,6 +16,11 @@ $(function() {
         },
         "setCurrentCat": function (cat) {
             this.currentCat = cat;
+        },
+        "updateCat": function (cat, name, url, clicks) {
+            cat.name = name;
+            cat.url = url;
+            cat.clicks = clicks;
         }
 
     };
@@ -41,7 +46,12 @@ $(function() {
         "setCurrentCat": function (cat) {
             model.setCurrentCat(cat);
             mainCatView.render();
-            mainCatView.displayClickCount();
+        },
+        "updateCat": function (name, url, clicks) {
+            var cat = this.getCurrentCat();
+            model.updateCat(cat, name, url, clicks);
+            catListView.render();
+            mainCatView.render();
         }
     };
 
@@ -87,10 +97,26 @@ $(function() {
             this.$image.unbind('click').click(function () {
                 octo.catClicked();
             });
+            this.displayClickCount();
         }
     };
 
     var adminCatView = {
+        "init": function () {
+            ;//get name, url, count elements into variables.
+            // set submit to trigger saveCat
+            // set admin button to trigger showHideAdmin & reload data.
+        },
+        "reset": function () {
+            ;//reset the fields.
+        },
+        "showHideAdmin": function () {
+            ; // toggle admin pane and clear data?
+        },
+        "saveCat": function () {
+            ;//read the data and save the cat.
+        }
+
 
     };
 
