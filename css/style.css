@@ -37,7 +37,7 @@ span {
 }
 .image {
     background: repeat scroll center top / cover ;
-    background-image: url("../img/unnamed_cat_1.jpg");
+    /*background-image: url("../img/unnamed_cat_1.jpg");*/
     height: calc(100% - 1em);
     width: 100%;
 }
