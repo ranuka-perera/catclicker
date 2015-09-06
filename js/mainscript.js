@@ -35,6 +35,7 @@ $(function() {
             mainCatView.init();
             catListView.init();
             mainCatView.render();
+            adminCatView.init();
         },
         "catClicked": function () {
             model.incrementClick();
@@ -69,7 +70,6 @@ $(function() {
             $('.cat-list').html(catList_html);
             $('.cat-li-item').each(function (index) {
                 $(this).click( function () {
-                    //return
                     octo.setCurrentCat(cats[index]);
                 })
             });
@@ -103,20 +103,36 @@ $(function() {
 
     var adminCatView = {
         "init": function () {
-            ;//get name, url, count elements into variables.
+            this.$name = $('#name');
+            this.$url = $('#url');
+            this.$clicks = $('#count');
+            this.$adminPane = $('.in-admin');
+            var $adminToggler = $('#toggle-admin');
+            var $submitter = $('#submit');
+            $adminToggler.click(function () {
+                adminCatView.showHideAdmin();
+            });
+            $submitter.click(function () {
+                adminCatView.saveCat();
+            });
             // set submit to trigger saveCat
             // set admin button to trigger showHideAdmin & reload data.
         },
         "reset": function () {
-            ;//reset the fields.
+            var cat = octo.getCurrentCat();
+            this.$name.val(cat.name);
+            this.$url.val(cat.url);
+            this.$clicks.val(cat.clicks);
         },
         "showHideAdmin": function () {
-            ; // toggle admin pane and clear data?
+            this.$adminPane.toggleClass('hide');
+            this.reset();
         },
         "saveCat": function () {
-            ;//read the data and save the cat.
+            var cat = octo.getCurrentCat();
+            octo.updateCat(this.$name.val(), this.$url.val(), parseInt(this.$clicks.val()));
+            this.showHideAdmin();
         }
-
 
     };
 
